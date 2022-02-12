@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,16 +9,76 @@
     <script>
         function start() {
             soccerInfo.hidden = false;
-            bMain.hidden = true;
+            bButtonMain.hidden = true;
             startH1.hidden = true;
             startH2.hidden = true;
             brake1.hidden = true;
+        }
+
+        function backImage() {
+            document.body.style.backgroundImage = "url('MainBacknd.jpg')";
+        }
+
+        function theme1() {
+            document.getElementById("Mainall").style.backgroundColor = "#484A47";
+            document.getElementById("change1").style.backgroundColor = "#484A47";
+            document.getElementById("change2").style.backgroundColor = "#484A47";
+            document.getElementById("change3").style.backgroundColor = "#484A47";
+            document.getElementById("change4").style.backgroundColor = "#484A47";
+            document.getElementById("change5").style.backgroundColor = "#484A47";
+
+            document.getElementById("Mainall").style.color = "white";
+            document.getElementById("change1").style.color = "white";
+            document.getElementById("change2").style.color = "white";
+            document.getElementById("change3").style.color = "white";
+            document.getElementById("change4").style.color = "white";
+            document.getElementById("change5").style.color = "white";
+        }
+
+        function theme2() {
+            document.getElementById("Mainall").style.backgroundColor = "#1C2231";
+            document.getElementById("change1").style.backgroundColor = "#1C2231";
+            document.getElementById("change2").style.backgroundColor = "#1C2231";
+            document.getElementById("change3").style.backgroundColor = "#1C2231";
+            document.getElementById("change4").style.backgroundColor = "#1C2231";
+            document.getElementById("change5").style.backgroundColor = "#1C2231";
+
+            document.getElementById("Mainall").style.color = "#D2F56E";
+            document.getElementById("change1").style.color = "#D2F56E";
+            document.getElementById("change2").style.color = "#D2F56E";
+            document.getElementById("change3").style.color = "#D2F56E";
+            document.getElementById("change4").style.color = "#D2F56E";
+            document.getElementById("change5").style.color = "#D2F56E";
+        }
+
+        function textSize() {
+            document.getElementById("Mainall").style.fontSize = "large";
+        }
+
+        function reset() {
+            document.body.style.backgroundImage = "url('MainBack.jpg')";
+
+            document.getElementById("Mainall").style.backgroundColor = "#AEBD93";
+            document.getElementById("change1").style.backgroundColor = "#AEBD93";
+            document.getElementById("change2").style.backgroundColor = "#AEBD93";
+            document.getElementById("change3").style.backgroundColor = "#AEBD93";
+            document.getElementById("change4").style.backgroundColor = "#AEBD93";
+            document.getElementById("change5").style.backgroundColor = "#AEBD93";
+
+            document.getElementById("Mainall").style.color = "#353535";
+            document.getElementById("change1").style.color = "#353535";
+            document.getElementById("change2").style.color = "#353535";
+            document.getElementById("change3").style.color = "#353535";
+            document.getElementById("change4").style.color = "#353535";
+            document.getElementById("change5").style.color = "#353535";
+
+            document.getElementById("Mainall").style.fontSize = "16px";
         }
     </script>
 </head>
 <body id="MainBody" class="Body">
     <div id="navBarMain" class="navBar">
-        <a href="MainPage.html" class="active" id="MainLink">דף ראשי</a>
+        <a href="index.html" class="active" id="MainLink">דף ראשי</a>
         <a href="Form.html" id="FormLink">להרשמה</a>
         <a href="HTA.html" id="HTALink">הפועל תל אביב</a>
         <a href="HBS.html" id="HBSLink">הפועל באר-שבע</a>
@@ -48,10 +108,19 @@
             <br />
             המשחק המודרני נוצר באנגליה, וחוקיו נוסדו עם היווסדה של התאחדות הכדורגל האנגלית. הארגון הבינלאומי פיפ"א מנהל את המשחקים ברחבי העולם ומשמש כמוסד העליון המפקח על המשחק. תחתיו פועלות התאחדויות יבשתיות, כגון אופ"א, המאגדת את מדינות אירופה, ותחתיהן
             ההתאחדויות המקומיות. התחרות הבינלאומית היוקרתית ביותר היא גביע העולם, אשר נערך אחת לארבע שנים תחת חסות פיפ"א. זוהי התחרות הספורטיבית הנצפית ביותר בכל העולם.
+            <br />
+            <br />
+            <br />
+            <br />
+            <button id="change1" class="bMain" onclick="backImage()">שינוי תמונת רקע</button>
+            <button id="change2" class="bMain" onclick="theme1()">ערכת נושא 1</button>
+            <button id="change3" class="bMain" onclick="theme2()">ערכת נושא 2</button>
+            <button id="change4" class="bMain" onclick="textSize()">שינוי גודל טקסט</button>
+            <button id="change5" class="bMain" onclick="reset()">אתחול</button>
         </div>
         <h1 id="startH1">ברוכים הבאים לאתר של יהב!</h1>
         <br id="brake1" />
-        <button id="bMain" onclick="start()">התחל לקרוא!</button>
+        <button id="bButtonMain" class="bMain" onclick="start()">התחל לקרוא!</button>
         <br />
         <br />
     </div>
